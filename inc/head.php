@@ -3,7 +3,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>CIFF - Visualización - David García Carbayo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 </head>
@@ -25,8 +27,6 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">HighCharts</a></li>
-                        <li><a href="#">Link</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Highcharts<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -74,6 +74,7 @@
                                 <li><a href="http://d3js.org/" target="_blank">Oficial</a></li>
                                 <li><a href="https://github.com/mbostock/d3/wiki" target="_blank">Doc</a></li>
                                 <li><a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">Ejemplos</a></li>
+                                <li><a href="http://bl.ocks.org/mbostock" target="_blank">Más ejemplos</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="http://tutorials.jenkov.com/svg/index.html" target="_blank">Curso SVG</a></li>
                                 <li role="separator" class="divider"></li>
@@ -93,18 +94,23 @@
                                 <li><a href="/three/">ThreeJS</a></li>
                             </ul>
                         </li>
+                        <li><a href="/apis">ApiS</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://docs.google.com/presentation/d/1uV0hZpneWqO1ewOJ5uqcunbu4Oe_DKzoQU1N_WCzW_U/edit#slide=id.gaf868e374_0_29" target="_blank">Apuntes</a></li>
+                        <li><a href="https://docs.google.com/presentation/d/1uV0hZpneWqO1ewOJ5uqcunbu4Oe_DKzoQU1N_WCzW_U/edit#slide=id.gaf868e374_0_29" target="_blank">Transparencias</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Máster<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://docs.google.com/document/d/1Gmz8BjYhdISX1VnTVdYKhvLxovpXf647KrSW_4RSx3o" target="_blank">Programa Intensivo</a></li>
                                 <li><a href="https://docs.google.com/document/d/15hl7s8209JfwRu2f3bc5e40Ktan86uzVX2Hi1hnd2wQ" target="_blank">Programa Estándar</a></li>
                                 <li role="separator" class="divider"></li>
+                                <li><a href="https://drive.google.com/drive/u/1/folders/0B1ZG_bv_5fptdTdQS3ROYnpra0U" target="_blank">Compartida</a></li>
                                 <li><a href="#" target="_blank">Comunidad</a></li>
-                                <li><a href="#" target="_blank">Moodle</a></li>
-                                <li><a href="#">Contacto</a></li>
+                                <li><a href="http://bigdata.campusciff.net/course/view.php?id=34" target="_blank">Moodle</a></li>
+                                <li><a href="/contacto">Contacto</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="https://github.com/ddgcarbayo/ciff" target="_blank">Repositorio</a></li>
+                                <li><a href="/referencias">Referencias</a></li>
                             </ul>
                         </li>
                     </ul>
