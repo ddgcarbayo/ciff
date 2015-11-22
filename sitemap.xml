@@ -1,0 +1,37 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+    <url>
+        <loc>http://ciff.dgcmedia.es/</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/highcharts/demo1.php</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/highcharts/demo2.php</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/google/demo1.php</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/google/demo2.php</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/chartjs/demo1.php</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/chartjs/demo2.php</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/nvd3/demo1.php</loc>
+    </url>
+    <url>
+        <loc>http://ciff.dgcmedia.es/nvd3/demo2.php</loc>
+    </url>
+</urlset>
