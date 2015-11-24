@@ -83,6 +83,10 @@
                                 <li><a href="/d3/demo3.php">Demo3</a></li>
                                 <li><a href="/d3/demo4.php">Demo4</a></li>
                                 <li><a href="/d3/demo5.php">Demo5</a></li>
+                                <li><a href="/d3/demo6.php">Demo6</a></li>
+                                <li><a href="/d3/demo7.php">Demo7</a></li>
+                                <li><a href="/d3/demo8.php">Demo8</a></li>
+                                <li><a href="/d3/demo9.php">Demo9</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -92,6 +96,13 @@
                                 <li><a href="/d3-angular-2/">Angular2</a></li>
                                 <li><a href="/polymer/">Polymer</a></li>
                                 <li><a href="/three/">ThreeJS</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ejercicios<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/ejercicios/spain">D3 Map</a></li>
+                                <li><a href="/ejercicios/barras">Barras</a></li>
                             </ul>
                         </li>
                         <li><a href="/apis">ApiS</a></li>
@@ -105,8 +116,8 @@
                                 <li><a href="https://docs.google.com/document/d/15hl7s8209JfwRu2f3bc5e40Ktan86uzVX2Hi1hnd2wQ" target="_blank">Programa Estándar</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="https://drive.google.com/drive/u/1/folders/0B1ZG_bv_5fptdTdQS3ROYnpra0U" target="_blank">Compartida</a></li>
-                                <li><a href="#" target="_blank">Comunidad</a></li>
-                                <li><a href="http://bigdata.campusciff.net/course/view.php?id=34" target="_blank">Moodle</a></li>
+                                <li><a href="https://plus.google.com/u/1/communities/102222763695151230283" target="_blank">Comunidad</a></li>
+                                <li><a href="http://bigdataexecutive.campusciff.net/course/view.php?id=15" target="_blank">Moodle</a></li>
                                 <li><a href="/contacto">Contacto</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="https://github.com/ddgcarbayo/ciff" target="_blank">Repositorio</a></li>

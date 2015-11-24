@@ -1,9 +1,9 @@
 <? require(__DIR__.'/inc/head.php')?>
 <div class="row">
-    <div class="col-xs-4">
-        <img src="/assets/logo.jpg">
+    <div class="col-md-4">
+        <img src="/assets/logo.jpg" class="img-responsive">
     </div>
-    <div class="col-xs-8">
+    <div class="col-md-8">
         <h1>¡Bienvenido!</h1>
         <p>Bienvenido al módulo de Visualización de datos del Máster en Business Analytics y Big Data</p>
         <p>Podrás acceder a todos los ejemplos y a la documentación propia del máster</p>
