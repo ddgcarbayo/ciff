@@ -78,6 +78,8 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="http://tutorials.jenkov.com/svg/index.html" target="_blank">Curso SVG</a></li>
                                 <li role="separator" class="divider"></li>
+                                <li><a href="/plantilla.html">Plantilla</a></li>
+                                <li role="separator" class="divider"></li>
                                 <li><a href="/d3/demo1.php">Demo1</a></li>
                                 <li><a href="/d3/demo2.php">Demo2</a></li>
                                 <li><a href="/d3/demo3.php">Demo3</a></li>
@@ -117,7 +119,7 @@
                                 <li role="separator" class="divider"></li>
                                 <li><a href="https://drive.google.com/drive/u/1/folders/0B1ZG_bv_5fptdTdQS3ROYnpra0U" target="_blank">Compartida</a></li>
                                 <li><a href="https://plus.google.com/u/1/communities/102222763695151230283" target="_blank">Comunidad</a></li>
-                                <li><a href="http://bigdataexecutive.campusciff.net/course/view.php?id=15" target="_blank">Moodle</a></li>
+                                <li><a href="http://acceso.campusciff.net/?plataforma=bigdataexecutive.campusciff.net" target="_blank">Moodle</a></li>
                                 <li><a href="/contacto">Contacto</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="https://github.com/ddgcarbayo/ciff" target="_blank">Repositorio</a></li>

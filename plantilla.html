@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>Plantilla</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+    /* ESTILOS CSS AQUÍ */
+
+    /* FIN ESTILOS CSS */
+</style>
+<script>
+    $(function () {
+        // INICIO CÓDIGO JAVASCRIPT
+        var urlData1 = 'https://s3.eu-central-1.amazonaws.com/ciff/dataset.json';
+        var urlData2 = 'https://s3.eu-central-1.amazonaws.com/ciff/datasetbis.json';
+        d3.json(urlData1,function(err,data){ console.log(data); });
+        d3.json(urlData2,function(err,data){ console.log(data); });
+
+
+        // FIN CÓDIGO JAVASCRIPT
+    });
+</script>
+</body>
+</html>

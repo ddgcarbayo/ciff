@@ -2,60 +2,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     <script>
         var w = 500;
-        var h = 100;
+        var h = 500;
         var barPadding = 1;
-
+        var margin = {top: 20, right: 20, bottom: 20, left: 40};
         var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
+        var domain = d3.max(dataset, function(d, i) { return d }); // 80
+        var y = d3.scale.linear()
+            .domain([0,domain]) // $0 to $80
+            .range([h, 0]); // Descendente porque SVG es y-down (su 0,0 está en top left)
 
-        var sortOrder=true;
-        var ordenabar = function () {
-            sortOrder = !sortOrder;
+        var x = d3.scale.ordinal()
+            .domain(dataset)
+            .rangePoints([0, w]);
 
-            sortItems = function (a, b) {
-                if (sortOrder) {
-                    return a - b;
-                }
-                return b - a;
-            };
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient('bottom')
+            .ticks(4);
 
-            svg.selectAll("rect")
-                .sort(sortItems)
-                .transition()
-                .delay(function (d, i) {
-                    return i * 50;
-                })
-                .duration(1000)
-                .attr("x", function (d, i) {
-                    return i * (w / dataset.length);
-                });
-
-            svg.selectAll('text')
-                .sort(sortItems)
-                .transition()
-                .delay(function (d, i) {
-                    return i * 50;
-                })
-                .duration(1000)
-                .text(function (d) {
-                    return d;
-                })
-                .attr("text-anchor", "middle")
-                .attr("x", function (d, i) {
-                    return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
-                })
-                .attr("y", function (d) {
-                    return h - (d * 4) + 14;
-                });
-        };
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient('left')
+            .tickFormat(d3.format(".2s"));
 
 
         //Create SVG element
         var svg = d3.select("body")
             .append("svg")
-            .attr("width", w)
-            .attr("height", h);
+            .attr("width", w+margin.right+margin.left)
+            .attr("height", h+margin.top+margin.bottom);
+        var g = svg.append('g')            // create a <g> element
+                .attr("transform", "translate("+margin.left+","+margin.top+")");
 
-        svg.selectAll("rect")
+        g.selectAll("rect")
             .data(dataset)
             .enter()
             .append("rect")
@@ -68,7 +47,6 @@
             .attr("fill", function (d) {
                 return "rgb(0, 0, " + (d * 10) + ")";
             })
-            .on('click',function(){ ordenabar(); })
             .transition()
             .delay(function(d, i) {
                 return i * 20;
@@ -78,6 +56,16 @@
             .attr("height", function (d) {
                 return d * 4;
             });
+
+        svg.append('g')            // create a <g> element
+            .attr('class', 'x axis') // specify classes
+            .attr("transform", "translate("+margin.left+","+(h+margin.top)+")")
+            .call(xAxis);            // let the axis do its thing
+
+        svg.append("g")
+            .attr("class", "y axis")
+            .attr("transform", "translate("+margin.left+","+margin.top+")")
+            .call(yAxis);
 
 
         svg.selectAll("text")
