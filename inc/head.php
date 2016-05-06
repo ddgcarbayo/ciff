@@ -73,6 +73,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="http://d3js.org/" target="_blank">Oficial</a></li>
                                 <li><a href="https://github.com/mbostock/d3/wiki" target="_blank">Doc</a></li>
+                                <li><a href="http://gcoch.github.io/D3-tutorial/index.html" target="_blank">Manual</a></li>
                                 <li><a href="https://github.com/mbostock/d3/wiki/Gallery" target="_blank">Ejemplos</a></li>
                                 <li><a href="http://bl.ocks.org/mbostock" target="_blank">Más ejemplos</a></li>
                                 <li role="separator" class="divider"></li>
@@ -108,18 +109,17 @@
                             </ul>
                         </li>
                         <li><a href="/apis">ApiS</a></li>
+                        <li><a href="/final">Ej.Final</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://docs.google.com/presentation/d/1uV0hZpneWqO1ewOJ5uqcunbu4Oe_DKzoQU1N_WCzW_U/edit#slide=id.gaf868e374_0_29" target="_blank">Transparencias</a></li>
+                        <li><a href="https://drive.google.com/open?id=1eVxLNAVtCPkDgopPdzoiGP4si_hQ8VWRw3qQhSe3VZM" target="_blank">Transparencias</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Máster<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="https://docs.google.com/document/d/1Gmz8BjYhdISX1VnTVdYKhvLxovpXf647KrSW_4RSx3o" target="_blank">Programa Intensivo</a></li>
-                                <li><a href="https://docs.google.com/document/d/15hl7s8209JfwRu2f3bc5e40Ktan86uzVX2Hi1hnd2wQ" target="_blank">Programa Estándar</a></li>
+                                <li><a href="https://drive.google.com/a/campusciff.net/file/d/0B1ZG_bv_5fptdGVkdENsTXZHSHc/view" target="_blank">Syllabus</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="https://drive.google.com/drive/u/1/folders/0B1ZG_bv_5fptdTdQS3ROYnpra0U" target="_blank">Compartida</a></li>
-                                <li><a href="https://plus.google.com/u/1/communities/102222763695151230283" target="_blank">Comunidad</a></li>
-                                <li><a href="http://acceso.campusciff.net/?plataforma=bigdataexecutive.campusciff.net" target="_blank">Moodle</a></li>
+                                <li><a href="https://drive.google.com/open?id=0B1ZG_bv_5fptZkF6M3lOM1d3d2s" target="_blank">Compartida</a></li>
+                                <li><a href="https://classroom.google.com/u/1/c/MTA5MTk4NDkyM1pa" target="_blank">ClassRoom</a></li>
                                 <li><a href="/contacto">Contacto</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="https://github.com/ddgcarbayo/ciff" target="_blank">Repositorio</a></li>

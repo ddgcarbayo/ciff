@@ -1,0 +1,91 @@
+  <!DOCTYPE html>
+  <html>
+  <head lang="en">
+      <meta charset="UTF-8">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.9/d3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-geo-projection/0.2.16/d3.geo.projection.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+      <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+      <style>
+          /* DATAVIZ */
+          #dataviz{width:100%; height:550px; position:relative; z-index:100; overflow:hidden;}
+  * {
+      transform-origin: 0px 0px 0px;
+  }
+      </style>
+      <title></title>
+  </head>
+  <body>
+  <div id="dataviz"></div>
+      <script>
+  //http://www.elmundo.es/elmundo/2015/graficos/datos/dic/s2/mapa20d/mapaTopoDesktop/index.html
+          $(window).load(function(){
+              var partidos,gd1,votos,munisPob;
+              var p1 = $.getJSON('https://s3.eu-central-1.amazonaws.com/ciff/_topo.json');
+              var p2 = $.getJSON('https://s3.eu-central-1.amazonaws.com/ciff/_partidos.json');
+              var p3 = $.getJSON('https://s3.eu-central-1.amazonaws.com/ciff/_votos2015.json');
+              var p4 = $.getJSON('https://s3.eu-central-1.amazonaws.com/ciff/_municipiosPob.json');
+
+              $.when( p1, p2, p3, p4).done(function ( r1, r2, r3, r4) {
+                  gd1 = r1[0];
+                  partidos = r2[0];
+                  votos = r3[0]; // el formato a continuación
+                  /*
+                  {
+                    idMunicipio : [p1,votosP1,p2,votosP2,...]
+                  }
+                  */
+                  munisPob = r4[0];
+                  debugger;
+                  pinta();
+              });
+
+              function pinta(){
+                  var centroSpain=[-2.4854312769,39.658829659];
+                  var width = 700, height = 580;
+                  var projection = d3.geo.mercator()
+                          .scale(17396)
+                          .center(centroSpain)
+                          .translate([width/2,height/2])
+
+                  //Generate paths based on projection
+                  var path = d3.geo.path()
+                          .projection(projection);
+
+                  //Create an SVG
+                  var svg = d3.select("#dataviz").append("svg")
+                          .attr("width", width)
+                          .attr("height", height)
+                          .attr('id','spMap');
+
+                  var features = svg.append("g")
+                      //.attr("class","features")
+                          .attr("class","features justDataElems")
+                          .attr('transform',"translate(1)scale(1)");
+
+
+
+                  //Create a path for each map feature in the data
+                  var municipios = features.append('g')
+                          .attr('class','municipios')
+                          .attr('transform','translate(295,244)scale(0.16)');
+
+  		            municipios
+                          .selectAll('path')
+                          .data(topojson.feature(gd1,gd1.objects.peninsula).features)
+                          .enter()
+                          .append("path")
+                          .attr("d",path)
+                          .attr('stroke','white')
+                          .on('click',function(d){ console.log(d); })
+                          .attr('stroke-width','0.2px')
+                          .attr('class','municipio')
+                          .attr('id',function(d){
+                              return 'muni_'+d.properties.name;
+                          });
+              }
+          });
+
+      </script>
+  </body>
+  </html>

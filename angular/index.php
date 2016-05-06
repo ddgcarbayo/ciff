@@ -3,8 +3,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
     <div ng-app="GraficosApp">
+
+
+
         <barras width="500" height="100" pad="1" datos="[5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 11, 12, 15, 20, 18, 17, 16, 18, 23, 25];"></barras>
+
+
+
+
     </div>
     <script>
         angular.module('GraficosApp', []).run();
@@ -20,7 +27,6 @@
                     pad: '@'
                 },
                 link: function (scope, element, atts) {
-                    debugger;
                     var sortOrder = true;
                     var svg;
                     var w = scope.width;
