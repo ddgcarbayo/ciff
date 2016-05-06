@@ -17,6 +17,13 @@
         // INICIO CÓDIGO JAVASCRIPT
         var urlData1 = 'https://s3.eu-central-1.amazonaws.com/ciff/dataset.json';
         var urlData2 = 'https://s3.eu-central-1.amazonaws.com/ciff/datasetbis.json';
+        // Varias Cargas de JSON con jQuery
+        var p1 = $.getJSON(urlData1);
+        var p2 = $.getJSON(urlData2);
+
+        $.when( p1, p2 ).done(function ( r1, r2 ) {
+            // Hacer algo
+        });
 
 
         // FIN CÓDIGO JAVASCRIPT

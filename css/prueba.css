@@ -1,0 +1,9 @@
+.btn {
+    color: red;
+    font-weight: bold !important;
+}
+
+#menu .elemento a.btn {
+    color: blue;
+    font-weight: normal !important;
+}
