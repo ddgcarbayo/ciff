@@ -14,19 +14,76 @@
 </style>
 <script>
     $(function () {
-        // INICIO CÓDIGO JAVASCRIPT
-        var urlData1 = 'https://s3.eu-central-1.amazonaws.com/ciff/dataset.json';
-        var urlData2 = 'https://s3.eu-central-1.amazonaws.com/ciff/datasetbis.json';
-        // Varias Cargas de JSON con jQuery
-        var p1 = $.getJSON(urlData1);
-        var p2 = $.getJSON(urlData2);
+        var w = 500;
+        var h = 400;
+        var barPadding = 1;
+        var mleft = 40;
 
-        $.when( p1, p2 ).done(function ( r1, r2 ) {
-            // Hacer algo
-        });
+        var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+            11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
+        var max = d3.max(dataset);
 
+//Create SVG element
+        var yAxScale = d3.scale.linear()
+                .domain([0,max])
+                .range([h,0]);
 
-        // FIN CÓDIGO JAVASCRIPT
+        var valScale = d3.scale.linear()
+                .domain([0,max])
+                .range([0,h]);
+
+        var yAxis = d3.svg.axis()
+                .orient('left')
+                .scale(yAxScale);
+
+        var svg = d3.select("body")
+                .append("svg")
+                .attr("width", w+mleft)
+                .attr("height", h);
+
+        svg.append("g")
+                .attr("transform", "translate(" + mleft + ",0)")
+                .call(yAxis);
+
+        svg.append("g")
+                .attr("transform", "translate(" + mleft + ",0)")
+                .selectAll("rect")
+                .data(dataset)
+                .enter()
+                .append("rect")
+                .attr("x", function (d, i) {
+                    return i * (w / dataset.length);
+                })
+                .attr("y", function (d) {
+                    return h - (d*h/max);
+                })
+                .attr("width", w / dataset.length - barPadding)
+                .attr("height", function (d) {
+                    return valScale(d);
+                })
+                .attr("fill", function (d) {
+                    return "rgb(0, 0, " + (d * 10) + ")";
+                });
+
+        svg.append("g")
+                .attr("transform", "translate(" + mleft + ",0)")
+                .selectAll("text")
+                .data(dataset)
+                .enter()
+                .append("text")
+                .text(function (d) {
+                    return d;
+                })
+                .attr("text-anchor", "middle")
+                .attr("x", function (d, i) {
+                    return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
+                })
+                .attr("y", function (d) {
+                    return h-14;
+                })
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "11px")
+                .attr("fill", "white");
     });
 </script>
 </body>

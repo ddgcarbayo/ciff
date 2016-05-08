@@ -213,7 +213,7 @@
 	var earth = createEarth(radius, segments);
 	earth.rotation.y = rotation;
 	scene.add(earth);
-	
+
 	var clouds = createClouds(radius, segments);
 	scene.add(clouds);
 	
@@ -241,14 +241,16 @@
 	renderer.setSize(width, height);
 	var webglEl = document.getElementById('webgl');
 	webglEl.appendChild(renderer.domElement);
-	
-	var socket = io();
 
-	socket.on('loc', function(coord) {
-		coord = JSON.parse(coord);
-		startLight(coord.lat, coord.lng, 2000, 0x6DAEE1);
-	});
+	function loadInfo(){
+		$.getJSON('/world/mock.php',function(info){
+			info.forEach(function(data){
+				startLight(data.lat, data.lng, 2000, 0x6DAEE1);
+			});
+		});
+	}
 
+	setInterval(loadInfo,1500);
 	render();
 	
 

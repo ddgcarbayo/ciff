@@ -99,6 +99,8 @@
                                 <li><a href="/d3-angular-2/">Angular2</a></li>
                                 <li><a href="/polymer/">Polymer</a></li>
                                 <li><a href="/three/">ThreeJS</a></li>
+                                <li><a href="/world/">Plano ThreeJS</a></li>
+                                <li><a href="/world/globe.html">Mundo ThreeJS</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
